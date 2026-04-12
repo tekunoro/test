@@ -1,0 +1,995 @@
+<!-- ===================================================
+  プログラミング教室テクノロ AO入試対策コース LP
+  WordPress固定ページ用（カスタムHTMLブロックに貼る）
+  =================================================== -->
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+<style>
+/* =====================================================
+   親クラス .technolo-ao で全スタイルをスコープ化
+   !important でテーマCSSの干渉を防ぐ
+   ===================================================== */
+
+.technolo-ao {
+  font-family: 'Noto Sans JP', sans-serif !important;
+  color: #212121 !important;
+  background: #fff !important;
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.technolo-ao *, .technolo-ao *::before, .technolo-ao *::after {
+  box-sizing: border-box !important;
+}
+
+/* リセット：テーマのmargin/paddingを打ち消す */
+.technolo-ao h1, .technolo-ao h2, .technolo-ao h3, .technolo-ao h4,
+.technolo-ao p, .technolo-ao ul, .technolo-ao li, .technolo-ao a,
+.technolo-ao div, .technolo-ao button, .technolo-ao span {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: 'Noto Sans JP', sans-serif !important;
+  line-height: inherit !important;
+}
+
+/* ── NAV ── */
+.technolo-ao .ao-nav {
+  background: #1565c0 !important;
+  padding: 0 32px !important;
+  height: 60px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2) !important;
+  margin-bottom: 0 !important;
+}
+.technolo-ao .ao-nav-logo {
+  color: #fff !important;
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  text-decoration: none !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  line-height: 1.4 !important;
+}
+.technolo-ao .ao-nav-logo small {
+  font-size: 0.75rem !important;
+  font-weight: 400 !important;
+  opacity: 0.85 !important;
+  display: inline !important;
+}
+.technolo-ao .ao-nav-btn {
+  background: #fff !important;
+  color: #1565c0 !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 8px 20px !important;
+  font-size: 0.82rem !important;
+  font-weight: 900 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+}
+
+/* ── HERO ── */
+.technolo-ao .ao-hero {
+  background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%) !important;
+  color: #fff !important;
+  padding: 64px 32px 72px !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+.technolo-ao .ao-hero::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -1px !important; left: 0 !important; right: 0 !important; height: 36px !important;
+  background: #fff !important;
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+.technolo-ao .ao-hero-new {
+  display: inline-block !important;
+  background: #fff !important;
+  color: #1565c0 !important;
+  font-size: 0.75rem !important;
+  font-weight: 900 !important;
+  padding: 4px 16px !important;
+  border-radius: 2px !important;
+  margin-bottom: 20px !important;
+  letter-spacing: 0.06em !important;
+}
+.technolo-ao .ao-hero h1 {
+  font-size: clamp(1.7rem, 4vw, 2.8rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.35 !important;
+  margin-bottom: 20px !important;
+  letter-spacing: 0.02em !important;
+  color: #fff !important;
+}
+.technolo-ao .ao-hero h1 span {
+  border-bottom: 3px solid rgba(255,255,255,0.6) !important;
+  display: inline !important;
+}
+.technolo-ao .ao-hero-desc {
+  font-size: 1rem !important;
+  line-height: 1.85 !important;
+  opacity: 0.92 !important;
+  margin-bottom: 36px !important;
+  max-width: 600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  color: #fff !important;
+}
+.technolo-ao .ao-hero-cta-wrap {
+  display: flex !important;
+  gap: 14px !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 48px !important;
+}
+.technolo-ao .ao-btn-white {
+  background: #fff !important;
+  color: #1565c0 !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 14px 36px !important;
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2) !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  line-height: 1.2 !important;
+}
+.technolo-ao .ao-btn-outline {
+  background: transparent !important;
+  color: #fff !important;
+  border: 2px solid rgba(255,255,255,0.7) !important;
+  border-radius: 4px !important;
+  padding: 14px 28px !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  line-height: 1.2 !important;
+}
+.technolo-ao .ao-hero-points {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 32px !important;
+  flex-wrap: wrap !important;
+}
+.technolo-ao .ao-hero-point {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+.technolo-ao .ao-hero-point-icon { font-size: 1.8rem !important; line-height: 1 !important; }
+.technolo-ao .ao-hero-point-label {
+  font-size: 0.8rem !important;
+  opacity: 0.88 !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+}
+
+/* ── SECTIONS ── */
+.technolo-ao .ao-section {
+  padding: 64px 32px !important;
+  background: #fff !important;
+}
+.technolo-ao .ao-section.gray {
+  background: #f5f5f5 !important;
+}
+.technolo-ao .ao-inner {
+  max-width: 900px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.technolo-ao .ao-section-head {
+  text-align: center !important;
+  margin-bottom: 48px !important;
+}
+.technolo-ao .ao-tag {
+  display: inline-block !important;
+  background: #1565c0 !important;
+  color: #fff !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  padding: 4px 14px !important;
+  border-radius: 2px !important;
+  margin-bottom: 14px !important;
+  letter-spacing: 0.08em !important;
+}
+.technolo-ao .ao-section-head h2 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.4 !important;
+  color: #212121 !important;
+}
+.technolo-ao .ao-section-head p {
+  color: #757575 !important;
+  font-size: 0.9rem !important;
+  margin-top: 10px !important;
+  line-height: 1.85 !important;
+}
+
+/* ── WHY CARDS ── */
+.technolo-ao .ao-why-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  gap: 20px !important;
+}
+.technolo-ao .ao-why-card {
+  background: #fff !important;
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 6px !important;
+  padding: 28px 24px !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+.technolo-ao .ao-why-num {
+  background: #1565c0 !important;
+  color: #fff !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  font-size: 0.85rem !important;
+  font-weight: 900 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 14px !important;
+}
+.technolo-ao .ao-why-card h3 {
+  font-size: 0.95rem !important;
+  font-weight: 900 !important;
+  margin-bottom: 8px !important;
+  line-height: 1.5 !important;
+  color: #212121 !important;
+}
+.technolo-ao .ao-why-card p {
+  font-size: 0.83rem !important;
+  color: #757575 !important;
+  line-height: 1.85 !important;
+}
+
+/* ── FLOW ── */
+.technolo-ao .ao-flow-list {
+  display: flex !important;
+  flex-direction: column !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+}
+.technolo-ao .ao-flow-item {
+  display: grid !important;
+  grid-template-columns: 96px 1fr !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+.technolo-ao .ao-flow-item:last-child { border-bottom: none !important; }
+.technolo-ao .ao-flow-left {
+  background: #1565c0 !important;
+  color: #fff !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 28px 16px !important;
+  text-align: center !important;
+}
+.technolo-ao .ao-flow-step-label {
+  font-size: 0.65rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.1em !important;
+  opacity: 0.8 !important;
+  margin-bottom: 4px !important;
+  color: #fff !important;
+}
+.technolo-ao .ao-flow-step-n {
+  font-size: 2.2rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  color: #fff !important;
+}
+.technolo-ao .ao-flow-right {
+  padding: 28px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  background: #fff !important;
+}
+.technolo-ao .ao-flow-period {
+  display: inline-block !important;
+  background: #e3f2fd !important;
+  color: #0d47a1 !important;
+  font-size: 0.7rem !important;
+  font-weight: 900 !important;
+  padding: 2px 12px !important;
+  border-radius: 2px !important;
+  margin-bottom: 10px !important;
+}
+.technolo-ao .ao-flow-right h3 {
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  margin-bottom: 8px !important;
+  color: #212121 !important;
+  line-height: 1.5 !important;
+}
+.technolo-ao .ao-flow-right p {
+  font-size: 0.83rem !important;
+  color: #757575 !important;
+  line-height: 1.85 !important;
+}
+
+/* ── BLUE BAR ── */
+.technolo-ao .ao-bar {
+  height: 4px !important;
+  background: #1565c0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ── UNIV ── */
+.technolo-ao .ao-univ-intro {
+  background: #1565c0 !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+  padding: 24px 28px !important;
+  margin-bottom: 28px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.85 !important;
+}
+.technolo-ao .ao-univ-intro strong { font-weight: 900 !important; color: #fff !important; }
+.technolo-ao .ao-univ-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
+  gap: 10px !important;
+}
+.technolo-ao .ao-univ-pill {
+  background: #fff !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 4px !important;
+  padding: 10px 14px !important;
+  font-size: 0.83rem !important;
+  font-weight: 700 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #212121 !important;
+}
+.technolo-ao .ao-univ-pill::before {
+  content: '' !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: #1565c0 !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+}
+.technolo-ao .ao-univ-note {
+  margin-top: 14px !important;
+  font-size: 0.76rem !important;
+  color: #757575 !important;
+}
+
+/* ── PRICE ── */
+.technolo-ao .ao-price-wrap {
+  display: grid !important;
+  grid-template-columns: 1.4fr 1fr !important;
+  gap: 24px !important;
+  align-items: start !important;
+}
+.technolo-ao .ao-price-main {
+  border: 3px solid #1565c0 !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+}
+.technolo-ao .ao-price-head {
+  background: #1565c0 !important;
+  color: #fff !important;
+  padding: 20px 28px !important;
+}
+.technolo-ao .ao-price-head h3 {
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  margin-bottom: 4px !important;
+  color: #fff !important;
+}
+.technolo-ao .ao-price-head p {
+  font-size: 0.8rem !important;
+  opacity: 0.88 !important;
+  color: #fff !important;
+}
+.technolo-ao .ao-price-body { padding: 28px !important; background: #fff !important; }
+.technolo-ao .ao-price-num {
+  font-size: 2.6rem !important;
+  font-weight: 900 !important;
+  color: #1565c0 !important;
+  line-height: 1 !important;
+  margin-bottom: 4px !important;
+}
+.technolo-ao .ao-price-num span {
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  color: #757575 !important;
+}
+.technolo-ao .ao-price-from {
+  font-size: 0.78rem !important;
+  color: #757575 !important;
+  margin-bottom: 22px !important;
+}
+.technolo-ao .ao-price-divider {
+  border: none !important;
+  border-top: 1px solid #e0e0e0 !important;
+  margin: 18px 0 !important;
+}
+.technolo-ao .ao-price-list { list-style: none !important; }
+.technolo-ao .ao-price-list li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  font-size: 0.85rem !important;
+  line-height: 1.65 !important;
+  margin-bottom: 12px !important;
+  color: #212121 !important;
+}
+.technolo-ao .ao-price-list li::before {
+  content: '✓' !important;
+  color: #1565c0 !important;
+  font-weight: 900 !important;
+  flex-shrink: 0 !important;
+  margin-top: 1px !important;
+}
+.technolo-ao .ao-price-list strong { font-weight: 700 !important; }
+.technolo-ao .ao-price-note {
+  margin-top: 18px !important;
+  font-size: 0.76rem !important;
+  color: #757575 !important;
+  line-height: 1.75 !important;
+}
+.technolo-ao .ao-price-side {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+.technolo-ao .ao-campaign {
+  background: #1565c0 !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+  padding: 22px 24px !important;
+}
+.technolo-ao .ao-campaign h4 {
+  font-size: 0.95rem !important;
+  font-weight: 900 !important;
+  margin-bottom: 8px !important;
+  color: #fff !important;
+}
+.technolo-ao .ao-campaign p {
+  font-size: 0.82rem !important;
+  opacity: 0.9 !important;
+  line-height: 1.8 !important;
+  color: #fff !important;
+}
+.technolo-ao .ao-campaign strong { font-weight: 900 !important; color: #fff !important; }
+.technolo-ao .ao-side-box {
+  background: #f5f5f5 !important;
+  border-radius: 6px !important;
+  border-left: 4px solid #1565c0 !important;
+  padding: 18px 20px !important;
+}
+.technolo-ao .ao-side-box h4 {
+  font-size: 0.88rem !important;
+  font-weight: 900 !important;
+  margin-bottom: 6px !important;
+  color: #212121 !important;
+}
+.technolo-ao .ao-side-box p {
+  font-size: 0.82rem !important;
+  color: #757575 !important;
+  line-height: 1.8 !important;
+}
+
+/* ── FAQ ── */
+.technolo-ao .ao-faq-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+.technolo-ao .ao-faq-item {
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+  background: #fff !important;
+}
+.technolo-ao .ao-faq-item.open { border-color: #1565c0 !important; }
+.technolo-ao .ao-faq-q {
+  width: 100% !important;
+  background: #fff !important;
+  border: none !important;
+  text-align: left !important;
+  padding: 18px 20px !important;
+  cursor: pointer !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  color: #212121 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 16px !important;
+  line-height: 1.5 !important;
+}
+.technolo-ao .ao-faq-mark {
+  color: #1565c0 !important;
+  font-weight: 900 !important;
+  font-size: 1.3rem !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.3s !important;
+  line-height: 1 !important;
+}
+.technolo-ao .ao-faq-item.open .ao-faq-mark { transform: rotate(45deg) !important; }
+.technolo-ao .ao-faq-a {
+  max-height: 0 !important;
+  overflow: hidden !important;
+  transition: max-height 0.35s ease, padding 0.35s !important;
+  padding: 0 20px !important;
+  font-size: 0.85rem !important;
+  color: #757575 !important;
+  line-height: 1.85 !important;
+  background: #fff !important;
+}
+.technolo-ao .ao-faq-item.open .ao-faq-a {
+  max-height: 300px !important;
+  padding: 0 20px 18px !important;
+}
+
+/* ── CTA ── */
+.technolo-ao .ao-cta {
+  background: linear-gradient(135deg, #0d47a1, #1565c0) !important;
+  color: #fff !important;
+  text-align: center !important;
+  padding: 72px 32px !important;
+}
+.technolo-ao .ao-cta h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem) !important;
+  font-weight: 900 !important;
+  margin-bottom: 16px !important;
+  line-height: 1.4 !important;
+  color: #fff !important;
+}
+.technolo-ao .ao-cta p {
+  opacity: 0.9 !important;
+  font-size: 0.95rem !important;
+  max-width: 500px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 36px !important;
+  line-height: 1.85 !important;
+  color: #fff !important;
+}
+.technolo-ao .ao-cta-btns {
+  display: flex !important;
+  gap: 16px !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+}
+
+/* ── INFO ── */
+.technolo-ao .ao-info {
+  background: #f5f5f5 !important;
+  border-top: 1px solid #e0e0e0 !important;
+  padding: 40px 32px !important;
+}
+.technolo-ao .ao-info-inner {
+  max-width: 900px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+  gap: 24px !important;
+}
+.technolo-ao .ao-info-block h4 {
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  color: #1565c0 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 6px !important;
+}
+.technolo-ao .ao-info-block p {
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  line-height: 1.7 !important;
+  color: #212121 !important;
+}
+.technolo-ao .ao-info-block a {
+  color: #1565c0 !important;
+  text-decoration: none !important;
+}
+
+/* ── FOOTER ── */
+.technolo-ao .ao-footer {
+  background: #212121 !important;
+  color: rgba(255,255,255,0.6) !important;
+  padding: 20px 32px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
+.technolo-ao .ao-footer .ao-footer-logo {
+  color: #fff !important;
+  font-weight: 900 !important;
+  font-size: 0.95rem !important;
+}
+.technolo-ao .ao-footer p {
+  font-size: 0.75rem !important;
+  color: rgba(255,255,255,0.5) !important;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 720px) {
+  .technolo-ao .ao-nav { padding: 0 16px !important; }
+  .technolo-ao .ao-section { padding: 48px 16px !important; }
+  .technolo-ao .ao-hero { padding: 48px 16px 60px !important; }
+  .technolo-ao .ao-price-wrap { grid-template-columns: 1fr !important; }
+  .technolo-ao .ao-flow-item { grid-template-columns: 72px 1fr !important; }
+  .technolo-ao .ao-flow-right { padding: 20px 16px !important; }
+  .technolo-ao .ao-info { padding: 32px 16px !important; }
+  .technolo-ao .ao-footer { padding: 16px !important; }
+  .technolo-ao .ao-cta { padding: 48px 16px !important; }
+}
+</style>
+
+<!-- ===================== CONTENT ===================== -->
+<div class="technolo-ao">
+
+  <!-- NAV -->
+  <div class="ao-nav">
+    <a href="https://programming-school-technolo.com/" class="ao-nav-logo">
+      プログラミング教室テクノロ
+      <small>　AO入試対策コース</small>
+    </a>
+    <button class="ao-nav-btn" onclick="document.getElementById('ao-contact').scrollIntoView({behavior:'smooth'})">無料相談する</button>
+  </div>
+
+  <!-- HERO -->
+  <div class="ao-hero">
+    <div class="ao-hero-new">▶ 2025年 新設コース</div>
+    <h1>
+      プログラミングの力で、<br>
+      <span>志望大学のAO入試を突破する。</span>
+    </h1>
+    <p class="ao-hero-desc">
+      テクノロが培ったPython・AI開発の指導力を、大学受験に活かす。<br>
+      高校生のための総合型選抜（AO入試）特化コース、始まります。
+    </p>
+    <div class="ao-hero-cta-wrap">
+      <a href="#ao-contact" class="ao-btn-white">無料体験授業を申込む</a>
+      <a href="#ao-flow" class="ao-btn-outline">コース内容を見る</a>
+    </div>
+    <div class="ao-hero-points">
+      <div class="ao-hero-point">
+        <div class="ao-hero-point-icon">🎯</div>
+        <div class="ao-hero-point-label">高校生対象</div>
+      </div>
+      <div class="ao-hero-point">
+        <div class="ao-hero-point-icon">🏆</div>
+        <div class="ao-hero-point-label">コンテスト対策</div>
+      </div>
+      <div class="ao-hero-point">
+        <div class="ao-hero-point-icon">📄</div>
+        <div class="ao-hero-point-label">書類・面接指導</div>
+      </div>
+      <div class="ao-hero-point">
+        <div class="ao-hero-point-icon">🤝</div>
+        <div class="ao-hero-point-label">出願まで伴走</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY -->
+  <div class="ao-section gray">
+    <div class="ao-inner">
+      <div class="ao-section-head">
+        <div class="ao-tag">このコースについて</div>
+        <h2>なぜ今、プログラミングが<br>AO入試に強いのか</h2>
+        <p>大学入試の仕組みが変わっています。「何ができるか」を問うAO入試で、プログラミングは最強の差別化ツールです。</p>
+      </div>
+      <div class="ao-why-grid">
+        <div class="ao-why-card">
+          <div class="ao-why-num">1</div>
+          <h3>理工系・情報系のAO入試が急増している</h3>
+          <p>慶應SFC・東工大・阪大など有名大学が、プログラミング実績を評価する総合型選抜を拡大。一般入試と並行して狙えるルートが広がっています。</p>
+        </div>
+        <div class="ao-why-card">
+          <div class="ao-why-num">2</div>
+          <h3>「作品」と「実績」が入試の武器になる</h3>
+          <p>コンテスト入賞歴・自作アプリ・ポートフォリオは、志望理由書で圧倒的な差がつきます。早く始めるほど有利です。</p>
+        </div>
+        <div class="ao-why-card">
+          <div class="ao-why-num">3</div>
+          <h3>関西圏に専門対応の教室がほぼない</h3>
+          <p>首都圏ではプログラミング×AO入試のスクールが増えていますが、関西はまだ空白地帯。テクノロがその専門コースを新設しました。</p>
+        </div>
+        <div class="ao-why-card">
+          <div class="ao-why-num">4</div>
+          <h3>共通テスト「情報Ⅰ」にも直結する</h3>
+          <p>テクノロで学ぶPythonは、2025年から必須化された情報Ⅰの対策にもなります。AO入試と一般入試、両方に備えられます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ao-bar"></div>
+
+  <!-- FLOW -->
+  <div class="ao-section" id="ao-flow">
+    <div class="ao-inner">
+      <div class="ao-section-head">
+        <div class="ao-tag">学習の流れ</div>
+        <h2>プログラミング学習から<br>出願まで一貫サポート</h2>
+        <p>各ステップに明確なゴールを設定。テクノロの講師が最後まで伴走します。</p>
+      </div>
+      <div class="ao-flow-list">
+        <div class="ao-flow-item">
+          <div class="ao-flow-left">
+            <div class="ao-flow-step-label">STEP</div>
+            <div class="ao-flow-step-n">1</div>
+          </div>
+          <div class="ao-flow-right">
+            <div class="ao-flow-period">1〜2ヶ月目</div>
+            <h3>プログラミング基礎 ＋ 強みの発見</h3>
+            <p>Python・Scratchから自分に合った言語を選択。同時に自己分析と志望校リサーチを行い、どんな実績を積むべきかを明確にします。テクノロで培った指導ノウハウで、初心者でも無理なく始められます。</p>
+          </div>
+        </div>
+        <div class="ao-flow-item">
+          <div class="ao-flow-left">
+            <div class="ao-flow-step-label">STEP</div>
+            <div class="ao-flow-step-n">2</div>
+          </div>
+          <div class="ao-flow-right">
+            <div class="ao-flow-period">3〜5ヶ月目</div>
+            <h3>作品制作 ＋ コンテスト挑戦</h3>
+            <p>「AO入試でアピールできる作品」を講師と企画・制作。ゲーム開発・AIアプリ・Webサービスなど、テクノロの得意分野を活かした作品づくりができます。全国コンテストへの応募もサポートします。</p>
+          </div>
+        </div>
+        <div class="ao-flow-item">
+          <div class="ao-flow-left">
+            <div class="ao-flow-step-label">STEP</div>
+            <div class="ao-flow-step-n">3</div>
+          </div>
+          <div class="ao-flow-right">
+            <div class="ao-flow-period">6〜8ヶ月目</div>
+            <h3>ポートフォリオ ＋ 志望理由書の作成</h3>
+            <p>制作した作品をまとめたポートフォリオを整備。プログラミング教室ならではの視点で、志望理由書・活動報告書の添削を行います。「何を学び、何を作り、どう活かすか」を言語化します。</p>
+          </div>
+        </div>
+        <div class="ao-flow-item">
+          <div class="ao-flow-left">
+            <div class="ao-flow-step-label">STEP</div>
+            <div class="ao-flow-step-n">4</div>
+          </div>
+          <div class="ao-flow-right">
+            <div class="ao-flow-period">9ヶ月目〜出願</div>
+            <h3>面接対策 ＋ 出願サポート</h3>
+            <p>技術的な質問への回答練習・プレゼン指導・模擬面接を実施します。「なぜこの作品を作ったか」「どんな課題を解決したか」を自信を持って語れるように準備します。出願書類の最終確認まで伴走します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ao-bar"></div>
+
+  <!-- UNIV -->
+  <div class="ao-section gray">
+    <div class="ao-inner">
+      <div class="ao-section-head">
+        <div class="ao-tag">対象大学</div>
+        <h2>プログラミングが評価される<br>主な大学・学部</h2>
+      </div>
+      <div class="ao-univ-intro">
+        AO入試・推薦入試では、<strong>コンテスト入賞歴・自作アプリ・ポートフォリオ・資格（情報処理技術者試験など）</strong>が評価対象になります。<br>
+        「何ができるか」を示す実績が、一般入試では差がつきにくい生徒にとって大きな武器になります。
+      </div>
+      <div class="ao-univ-grid">
+        <div class="ao-univ-pill">慶應義塾大学 SFC</div>
+        <div class="ao-univ-pill">東京工業大学</div>
+        <div class="ao-univ-pill">大阪大学</div>
+        <div class="ao-univ-pill">東北大学</div>
+        <div class="ao-univ-pill">筑波大学</div>
+        <div class="ao-univ-pill">九州大学</div>
+        <div class="ao-univ-pill">早稲田大学</div>
+        <div class="ao-univ-pill">滋賀大学</div>
+        <div class="ao-univ-pill">立命館大学</div>
+        <div class="ao-univ-pill">同志社大学</div>
+        <div class="ao-univ-pill">関西学院大学</div>
+        <div class="ao-univ-pill">神戸大学</div>
+        <div class="ao-univ-pill">京都大学</div>
+        <div class="ao-univ-pill">大阪公立大学</div>
+        <div class="ao-univ-pill">関西大学</div>
+        <div class="ao-univ-pill">近畿大学</div>
+      </div>
+      <p class="ao-univ-note">※ 出願要件は毎年変更されます。必ず各大学の最新募集要項をご確認ください。</p>
+    </div>
+  </div>
+
+  <!-- PRICE -->
+  <div class="ao-section">
+    <div class="ao-inner">
+      <div class="ao-section-head">
+        <div class="ao-tag">授業料</div>
+        <h2>料金</h2>
+        <p>月謝制。志望校・学習進度に合わせて柔軟にカリキュラムを調整します。</p>
+      </div>
+      <div class="ao-price-wrap">
+        <div class="ao-price-main">
+          <div class="ao-price-head">
+            <h3>AO入試対策コース（高校生）</h3>
+            <p>月4回の個別指導（1回80分）</p>
+          </div>
+          <div class="ao-price-body">
+            <div class="ao-price-num">¥19,800<span>／月〜（税込）</span></div>
+            <p class="ao-price-from">※ 受講回数・内容により変動します。詳細はお問い合わせください。</p>
+            <hr class="ao-price-divider">
+            <ul class="ao-price-list">
+              <li><strong>プログラミング個別指導</strong>（Python・Scratch・AI開発）</li>
+              <li><strong>コンテスト応募サポート</strong>（作品選定〜書類作成まで）</li>
+              <li><strong>ポートフォリオ制作指導</strong>（大学受験向け）</li>
+              <li><strong>志望理由書・活動報告書の添削</strong>（無制限）</li>
+              <li><strong>模擬面接</strong>（技術的な質問対応を含む）</li>
+            </ul>
+            <p class="ao-price-note">
+              入会金：¥11,000（税込）<br>
+              既存の在校生は入会金免除<br>
+              ※ 別途教材費がかかる場合があります
+            </p>
+          </div>
+        </div>
+        <div class="ao-price-side">
+          <div class="ao-campaign">
+            <h4>🎉 開講記念キャンペーン</h4>
+            <p>2025年中のご入会で入会金が<strong>50%OFF</strong>になります。この機会にぜひご検討ください。</p>
+          </div>
+          <div class="ao-side-box">
+            <h4>無料体験授業あります</h4>
+            <p>実際の授業を体験しながら、プログラミングレベルのヒアリングと志望校の相談ができます。まずはお気軽にお申込みください。</p>
+          </div>
+          <div class="ao-side-box">
+            <h4>一般入試との両立もOK</h4>
+            <p>テクノロで学ぶPythonは共通テスト「情報Ⅰ」の対策にもなります。AO入試と一般入試の両方に備えるスケジュール設計もサポートします。</p>
+          </div>
+          <div class="ao-side-box">
+            <h4>既存コースと併用可</h4>
+            <p>現在テクノロに通っている生徒も、AO入試対策を追加受講できます。詳しくはお問い合わせください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ao-bar"></div>
+
+  <!-- FAQ -->
+  <div class="ao-section gray">
+    <div class="ao-inner">
+      <div class="ao-section-head">
+        <div class="ao-tag">よくある質問</div>
+        <h2>FAQ</h2>
+      </div>
+      <div class="ao-faq-list">
+        <div class="ao-faq-item">
+          <button class="ao-faq-q" onclick="aoToggleFaq(this)">
+            プログラミングが初めてでも大丈夫ですか？
+            <span class="ao-faq-mark">+</span>
+          </button>
+          <div class="ao-faq-a">はい、まったく問題ありません。テクノロはゼロから始める生徒に実績があります。Scratchから丁寧に指導し、段階的にPythonへとステップアップします。ただし、早く始めるほど実績を積む時間が長くなるため、高校1〜2年生からのスタートをおすすめします。</div>
+        </div>
+        <div class="ao-faq-item">
+          <button class="ao-faq-q" onclick="aoToggleFaq(this)">
+            どんな大学・学部を目指す生徒に向いていますか？
+            <span class="ao-faq-mark">+</span>
+          </button>
+          <div class="ao-faq-a">情報系・理工系・データサイエンス系の学部を総合型選抜で目指す高校生に最適です。慶應SFC・東工大・阪大・立命館・同志社などを志望する方はぜひご相談ください。</div>
+        </div>
+        <div class="ao-faq-item">
+          <button class="ao-faq-q" onclick="aoToggleFaq(this)">
+            コンテストに入賞できなかった場合はどうなりますか？
+            <span class="ao-faq-mark">+</span>
+          </button>
+          <div class="ao-faq-a">コンテスト入賞は加点要素のひとつに過ぎません。自作アプリや課題解決型の制作物も強力なアピール材料になります。「挑戦した過程と学び」そのものを評価する大学も多く、諦める必要はありません。</div>
+        </div>
+        <div class="ao-faq-item">
+          <button class="ao-faq-q" onclick="aoToggleFaq(this)">
+            一般入試との両立はできますか？
+            <span class="ao-faq-mark">+</span>
+          </button>
+          <div class="ao-faq-a">できます。テクノロで学ぶPythonは共通テスト「情報Ⅰ」の対策にもなるため、一般入試と並行して準備できます。AO入試に不合格でも一般入試でリカバリーできるスケジュール設計もサポートします。</div>
+        </div>
+        <div class="ao-faq-item">
+          <button class="ao-faq-q" onclick="aoToggleFaq(this)">
+            現在テクノロに通っている生徒も受講できますか？
+            <span class="ao-faq-mark">+</span>
+          </button>
+          <div class="ao-faq-a">はい、在校生も追加受講できます。既存コースで身につけたプログラミングスキルをAO入試対策に活かすことができます。入会金も免除になりますので、お気軽にお問い合わせください。</div>
+        </div>
+        <div class="ao-faq-item">
+          <button class="ao-faq-q" onclick="aoToggleFaq(this)">
+            高校3年生から始めても間に合いますか？
+            <span class="ao-faq-mark">+</span>
+          </button>
+          <div class="ao-faq-a">AO入試の出願は高校3年生の夏〜秋が多いため、3年生の春からだと時間的にタイトになります。既にある程度の実績やプログラミング経験がある場合は対応できることもありますので、まずご相談ください。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="ao-cta" id="ao-contact">
+    <h2>まず、無料で相談してみてください。</h2>
+    <p>志望校・現在のレベル・スケジュールをヒアリングし、あなただけの合格ロードマップを一緒に作ります。無料体験授業・無料相談は随時受付中です。</p>
+    <div class="ao-cta-btns">
+      <a href="tel:0675058702" class="ao-btn-white">📞 06-7505-8702 に電話する</a>
+      <a href="mailto:info@programming-school-technolo.com" class="ao-btn-outline">✉ メールで問い合わせる</a>
+    </div>
+  </div>
+
+  <!-- INFO -->
+  <div class="ao-info">
+    <div class="ao-info-inner">
+      <div class="ao-info-block">
+        <h4>教室名</h4>
+        <p>プログラミング教室テクノロ</p>
+      </div>
+      <div class="ao-info-block">
+        <h4>所在地</h4>
+        <p>〒570-0026<br>大阪府守口市松月町2-19<br>松月ビル1階</p>
+      </div>
+      <div class="ao-info-block">
+        <h4>アクセス</h4>
+        <p>京阪本線 守口市駅<br>東改札口から徒歩約5分</p>
+      </div>
+      <div class="ao-info-block">
+        <h4>受付時間</h4>
+        <p>午前11時〜午後8時</p>
+      </div>
+      <div class="ao-info-block">
+        <h4>電話 / メール</h4>
+        <p>
+          <a href="tel:0675058702">06-7505-8702</a><br>
+          <a href="mailto:info@programming-school-technolo.com">info@programming-school-technolo.com</a>
+        </p>
+      </div>
+      <div class="ao-info-block">
+        <h4>公式サイト</h4>
+        <p><a href="https://programming-school-technolo.com/" target="_blank">programming-school-technolo.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="ao-footer">
+    <div class="ao-footer-logo">プログラミング教室テクノロ</div>
+    <p>© 2025 プログラミング教室テクノロ All Rights Reserved.</p>
+  </div>
+
+</div><!-- /.technolo-ao -->
+
+<script>
+function aoToggleFaq(btn) {
+  var item = btn.closest('.ao-faq-item');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.ao-faq-item').forEach(function(i){ i.classList.remove('open'); });
+  if (!isOpen) item.classList.add('open');
+}
+</script>
